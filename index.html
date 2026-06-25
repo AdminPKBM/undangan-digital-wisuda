@@ -682,4 +682,211 @@
                 width: auto;
             }
             h1 {
-                font-size: 3.2
+                font-size: 3.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars-overlay"></div>
+
+    <audio id="ambient-audio" loop>
+        <source src="https://archive.org/download/nocturneineflatmajorop.9no.2/nocturneineflatmajorop.9no.2_vbr.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="audio-player-widget" id="audio-widget-btn" onclick="controlAudio()">
+        <svg id="widget-svg-icon" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+    </button>
+
+    <div id="invitation-cover">
+        <div class="cover-content">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibzDphAL4ztz5zOK5aKyBMBxvqpnQTEC_t_ighyphenhyphenvZkfEYGLgglq6b2wJgDN6HEKVCMFF7w4fTuXAGjAla7be9raDM_cYMejGzDbCwIuQakR8mG32FYhWoFC8Mr6L2C55shs5lQ2Mh0XbwQ-uu9LPBPew_yij6XTa8Dp2SdjnzawyN8NyllL1h_QbbiqSA/s320/logo_pkbm-removebg-preview.png" alt="Logo PKBM" class="cover-logo">
+            <h2>PKBM Celah Cahaya</h2>
+            <p>Graduation & Promotion Day 2026</p>
+            <button class="btn-luxury" onclick="revealInvitation()">
+                Open Official Invitation
+            </button>
+        </div>
+    </div>
+
+    <div class="invitation-container" id="main-card-canvas">
+        <div class="corner-border tl"></div>
+        <div class="corner-border tr"></div>
+        <div class="corner-border bl"></div>
+        <div class="corner-border br"></div>
+
+        <div class="animate-step step-1">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibzDphAL4ztz5zOK5aKyBMBxvqpnQTEC_t_ighyphenhyphenvZkfEYGLgglq6b2wJgDN6HEKVCMFF7w4fTuXAGjAla7be9raDM_cYMejGzDbCwIuQakR8mG32FYhWoFC8Mr6L2C55shs5lQ2Mh0XbwQ-uu9LPBPew_yij6XTa8Dp2SdjnzawyN8NyllL1h_QbbiqSA/s320/logo_pkbm-removebg-preview.png" alt="Logo PKBM" class="logo-img">
+            <div class="subtitle">Official Invitation</div>
+            <h1>Wisuda & Kenaikan Kelas</h1>
+            <h3 style="font-family:'Cinzel', serif; font-size:1.5rem; letter-spacing:3px; color:#fff; font-weight: 400;">PKBM Celah Cahaya</h3>
+            <p class="tagline">"Merayakan Prestasi, Menguatkan Karakter, Menginspirasi Masa Depan."</p>
+            
+            <div class="divider-container">
+                <div class="divider-line"></div>
+                <div class="divider-node">♦</div>
+                <div class="divider-line"></div>
+            </div>
+        </div>
+
+        <p class="opening-text animate-step step-2">
+            Assalamu’alaikum Wr. Wb.  |  Salam Sejahtera<br><br>
+            Dengan penuh rasa syukur dan hormat, kami mengundang Bapak/Ibu Orang Tua/Wali Siswa serta seluruh Warga Belajar Kelas IX & XII PKBM Celah Cahaya untuk menghadiri prosesi Wisuda Kenaikan Kelas & Pelepasan Warga Belajar Tahun Ajaran 2025/2026.
+        </p>
+
+        <div class="details-grid animate-step step-3">
+            <div class="info-cell">
+                <div class="cell-header">
+                    <svg class="cell-icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                    <div class="cell-label">Hari / Tanggal</div>
+                </div>
+                <div class="cell-value">Senin, 29 Juni 2026</div>
+            </div>
+            <div class="info-cell">
+                <div class="cell-header">
+                    <svg class="cell-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <div class="cell-label">Waktu Kegiatan</div>
+                </div>
+                <div class="cell-value">06.30 WIB s/d Selesai</div>
+            </div>
+            <div class="info-cell full-row">
+                <div class="cell-header">
+                    <svg class="cell-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <div class="cell-label">Tempat Pelaksanaan</div>
+                </div>
+                <div class="cell-value">
+                    <strong style="color: var(--gold-light); font-weight:600; display:block; margin-bottom: 4px;">Saung Komunitas Ngejah</strong>
+                    Kp. Sukawangi RT. 01 RW. 01, Desa Sukawangi, Kecamatan Singajaya, Kabupaten Garut
+                </div>
+            </div>
+        </div>
+
+        <div class="signature-container animate-step step-4">
+            <p class="sig-title">Mengetahui,</p>
+            <p class="sig-role">Kepala PKBM Celah Cahaya</p>
+            <div class="sig-space"></div>
+            <p class="sig-name">Ine Yuniar Suryadi, S.Pd</p>
+        </div>
+
+        <div class="countdown-section animate-step step-4">
+            <div class="countdown-title">Menuju Hari Bahagia</div>
+            <div class="countdown-container">
+                <div class="time-box"><span class="num" id="days">00</span><span class="label">Hari</span></div>
+                <div class="time-box"><span class="num" id="hours">00</span><span class="label">Jam</span></div>
+                <div class="time-box"><span class="num" id="minutes">00</span><span class="label">Menit</span></div>
+                <div class="time-box"><span class="num" id="seconds">00</span><span class="label">Detik</span></div>
+            </div>
+        </div>
+
+        <div class="donation-section animate-step step-4">
+            <div class="donation-header">Dukungan Pendidikan</div>
+            <p class="donation-desc">Bagi Bapak/Ibu yang berkenan memberikan kontribusi kasih kasih atau donasi sukarela demi mendukung kemajuan bakat warga belajar:</p>
+            <div class="donation-box">
+                <span class="donation-method">DANA</span>
+                <span class="donation-number" id="don-num">081223546686</span>
+                <button class="btn-copy" onclick="copyDonationNumber()">Salin</button>
+            </div>
+        </div>
+
+        <div class="action-area animate-step step-5">
+            <a href="https://www.google.com/maps/search/?api=1&query=Saung+Komunitas+Ngejah+Sukawangi+Singajaya+Garut" target="_blank" class="btn-sec maps">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Navigasi Google Maps
+            </a>
+            <a href="https://wa.me/6281223546686?text=Halo%20Admin%20PKBM%20Celah%20Cahaya%2C%20saya%20mengonfirmasi%20kehadiran%20pada%20acara%20Wisuda%20%26%20Kenaikan%20Kelas." target="_blank" class="btn-sec rsvp">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Konfirmasi Kehadiran (RSVP)
+            </a>
+        </div>
+
+        <p class="footer-text animate-step step-5">
+            Kehadiran Bapak/Ibu merupakan kehormatan dan kebahagiaan bagi kami.<br>
+            © 2026 PKBM Celah Cahaya. All Rights Reserved.
+        </p>
+    </div>
+
+    <script>
+        const audioEngine = document.getElementById('ambient-audio');
+        const widgetBtn = document.getElementById('audio-widget-btn');
+        const widgetIcon = document.getElementById('widget-svg-icon');
+        let audioPlayingState = false;
+
+        function revealInvitation() {
+            const coverElement = document.getElementById('invitation-cover');
+            const mainCardElement = document.getElementById('main-card-canvas');
+            
+            coverElement.classList.add('fade-out');
+            mainCardElement.classList.add('show');
+            
+            audioEngine.play().then(() => {
+                audioPlayingState = true;
+                widgetBtn.classList.add('spin-anim');
+            }).catch(error => {
+                console.log("Audio autoplay restricted by browser policy.", error);
+            });
+
+            setTimeout(() => {
+                coverElement.style.display = 'none';
+                widgetBtn.style.display = 'flex';
+            }, 1200);
+        }
+
+        function controlAudio() {
+            if (audioPlayingState) {
+                audioEngine.pause();
+                widgetBtn.classList.remove('spin-anim');
+                widgetIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; 
+                audioPlayingState = false;
+            } else {
+                audioEngine.play();
+                widgetBtn.classList.add('spin-anim');
+                widgetIcon.innerHTML = '<path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>'; 
+                audioPlayingState = true;
+            }
+        }
+
+        function copyDonationNumber() {
+            const numberText = document.getElementById('don-num').innerText;
+            navigator.clipboard.writeText(numberText).then(() => {
+                const copyBtn = document.querySelector('.btn-copy');
+                copyBtn.innerText = 'Tersalin!';
+                copyBtn.style.background = 'linear-gradient(135deg, #fffcf5 0%, #d4af37 40%, #b38f29 75%)';
+                copyBtn.style.color = '#02040a';
+                setTimeout(() => {
+                    copyBtn.innerText = 'Salin';
+                    copyBtn.style.background = 'transparent';
+                    copyBtn.style.color = 'var(--gold-light)';
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal menyalin text: ', err);
+            });
+        }
+
+        // Countdown System Engine Setup (Targeting June 29, 2026)
+        const targetEventDate = new Date('June 29, 2026 06:30:00').getTime();
+
+        const runTimer = setInterval(function() {
+            const currentSystemTime = new Date().getTime();
+            const timeDifference = targetEventDate - currentSystemTime;
+
+            const calcDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const calcHours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const calcMinutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const calcSeconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = String(Math.max(0, calcDays)).padStart(2, '0');
+            document.getElementById('hours').innerHTML = String(Math.max(0, calcHours)).padStart(2, '0');
+            document.getElementById('minutes').innerHTML = String(Math.max(0, calcMinutes)).padStart(2, '0');
+            document.getElementById('seconds').innerHTML = String(Math.max(0, calcSeconds)).padStart(2, '0');
+
+            if (timeDifference < 0) {
+                clearInterval(runTimer);
+                document.querySelector('.countdown-section').style.display = 'none';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
